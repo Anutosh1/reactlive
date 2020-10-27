@@ -17,7 +17,7 @@ export default class PersonList extends React.Component {
     render() {
         return (
             <div>
-                <h1>Details</h1>
+                <h1>Details Of Employee</h1>
                 {this.state.persons.map((person,index) => 
                     <div key={person.id}>
                         <p> {index+1} </p>
