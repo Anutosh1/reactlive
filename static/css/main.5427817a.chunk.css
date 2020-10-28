@@ -1,0 +1,2 @@
+.main,.sidebar{display:flex}.sidebar{height:100%;overflow-y:auto;overflow-x:hidden;position:fixed;flex-direction:column;z-index:101}.pro-sidebar-inner{background-color:brown}.image{position:absolute;right:10px;cursor:pointer}.searchimg{margin-left:25px}
+/*# sourceMappingURL=main.5427817a.chunk.css.map */
