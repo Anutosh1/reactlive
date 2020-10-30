@@ -1,0 +1,64 @@
+$sidebar-bg-color: #FFFFFF !default;
+$sidebar-color:#666673 !default;
+$icon-bg-color: #FFFFFF !default;
+$submenu-bg-color: #FFFFFF !default;
+$submenu-bg-color-collapsed: #FFFFFF !default;
+$highlight-color: #0BB7A7 !default;
+$sidebar-width: 270px !default;
+$sidebar-collapsed-width: 80px !default;
+@import '~react-pro-sidebar/dist/scss/styles.scss';
+
+
+.main {
+    display: flex;
+    font-size: 18;
+    font-weight: 700;
+}
+ 
+
+.sidebar {
+    height: 100%;
+    display: flex;
+    overflow-y: auto;
+    overflow-x: hidden;
+    flex-direction: column;
+    position: fixed;
+    z-index: 101;
+    border: 2px solid #0BB7A7;
+    padding-bottom: 0px;
+}
+
+
+
+
+
+.image {
+    position: absolute;
+    right: 29px;
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+}
+
+.searchimg {
+    margin-left: 20px;
+    height: 25px;
+    width: 25px;
+    color: #0BB7A7 !important;
+}
+
+.header {
+    min-height: 30px;
+}
+
+
+
+
+.sidebarcontent {
+    padding-bottom: 20px;
+}
+
+// .Header {
+//     position: absolute;
+//     top: 0;
+// }

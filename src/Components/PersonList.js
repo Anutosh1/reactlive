@@ -1,7 +1,6 @@
 import React from "react"
 import { ProSidebar, Menu, MenuItem, SubMenu, SidebarHeader, SidebarFooter, SidebarContent } from 'react-pro-sidebar';
-import 'react-pro-sidebar/dist/css/styles.css';
-import './PersonList.css'
+import './PersonList.scss'
 import {  FaGem ,FaBars} from 'react-icons/fa';
 import { AiOutlineSetting, AiFillFileMarkdown } from 'react-icons/ai'
 import { BiSearch, BiTestTube, BiCoinStack } from 'react-icons/bi'
@@ -37,12 +36,13 @@ export default class PersonList extends React.Component {
         return (
             <div className="main"> 
                 <ProSidebar className="sidebar" collapsed={this.state.collapsed} rtl={false} toggled="abcd" >
-                    <SidebarHeader className="Header">
-                        <p><BiSearch className="searchimg" /><FaBars className="image" value="collapsed" onClick={this.handleChange}/></p>
-                        
-                    </SidebarHeader>
                     
-                    <SidebarContent>
+                    {/* <SidebarHeader>
+                        <p className="header">{!this.state.collapsed && <BiSearch className="searchimg" />}<FaBars className="image" value="collapsed" onClick={this.handleChange}/></p>
+                    </SidebarHeader> */}
+
+                    <SidebarContent className="sidebarcontent">
+                    <p className="header">{!this.state.collapsed && <BiSearch className="searchimg" />}<FaBars className="image" value="collapsed" onClick={this.handleChange}/></p>
                         <Menu iconShape="circle" popperArrow={this.state.popperArrow}>
                             <MenuItem icon={<AiFillFileMarkdown />} >Project Management</MenuItem>
                             <MenuItem icon={<BiCoinStack />} >Data Management</MenuItem>
@@ -54,7 +54,7 @@ export default class PersonList extends React.Component {
                                 <MenuItem>Statistical Tests</MenuItem>
                             </SubMenu>
                             
-                            <MenuItem icon={<FaGem />} >Data Transformation</MenuItem>
+                            <MenuItem icon={<FaGem />} ><span className="text">Data Transformation</span></MenuItem>
                             <MenuItem icon={<FcBinoculars />} >Sampling</MenuItem>
                             <MenuItem icon={<AiFillFileMarkdown />} >Model Estimation</MenuItem>
                             <MenuItem icon={<BiTestTube />} >Model Testing</MenuItem>
@@ -62,7 +62,9 @@ export default class PersonList extends React.Component {
                             <MenuItem icon={<FaGem />} >Model Management</MenuItem>
                         </Menu>
                     </SidebarContent>
-
+                    <div>
+                    
+                    </div>
                     <SidebarFooter className="Footer">
                         <Menu><MenuItem icon={<AiOutlineSetting />} >Settings</MenuItem></Menu>
                         
